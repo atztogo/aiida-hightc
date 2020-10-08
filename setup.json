@@ -1,0 +1,34 @@
+{
+    "name": "aiida-hightc",
+    "author": "Atsushi Togo",
+    "author_email": "atz.togo@gmail.com",
+    "description": "Collection of workflows for running electronic and phonon structure calculations",
+    "url": "https://github.com/atztogo/aiida-hightc",
+    "license": "MIT",
+    "classifiers": [
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Topic :: Scientific/Engineering :: Physics",
+        "Topic :: Scientific/Engineering :: Chemistry",
+        "Framework :: AiiDA"
+    ],
+    "version": "0.1.0",
+    "entry_points": {
+        "aiida.workflows": [
+            "hightc.bands = aiida_hightc.workflows.bands: BandsWorkChain"
+        ]
+    },
+    "include_package_data": true,
+    "setup_requires": ["reentry"],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida-core>=1.4.2,<2.0.0",
+        "aiida-vasp>=1.0.1",
+        "aiida-phonopy>=0.3.0",
+        "phonopy>=2.8.1",
+        "seekpath>=2.0.1"
+    ]
+}
